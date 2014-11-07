@@ -15,7 +15,10 @@ zcxvzxcv'''
 
 keyword = "var wanInfoArr = new Array("
 
-def ectract(html_content):
+def getHtml():
+    return tmp
+
+def do_extract(html_content):
     start_index = html_content.index(keyword) + len(keyword)
     end_index = html_content.index(");", start_index)
     content = html_content[start_index: end_index]
@@ -23,3 +26,6 @@ def ectract(html_content):
     contents = content.split(",")
     ip = contents[1].strip()
     return ip
+
+def extract():
+    return do_extract(getHtml())
